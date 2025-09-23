@@ -1,7 +1,7 @@
 [package]
 rust-version = "1.81"
 name = "uefi-reset"
-version = "0.1.0"
+version = "1.0.0"
 edition = "2021"
 authors = ["Nathaniel McCallum <nathaniel.mccallum@amd.com>"]
 description = "UEFI modules that reset the system when loaded"
