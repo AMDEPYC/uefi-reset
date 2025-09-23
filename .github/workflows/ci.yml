@@ -19,7 +19,7 @@ jobs:
         rust: [stable, beta, nightly, 1.81.0]  # stable, beta, nightly, and MSRV
     steps:
       - name: checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       
       - name: install rust toolchain
         uses: dtolnay/rust-toolchain@master
