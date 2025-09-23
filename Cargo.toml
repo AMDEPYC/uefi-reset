@@ -1,0 +1,23 @@
+[package]
+rust-version = "1.81"
+name = "uefi-reset"
+version = "0.1.0"
+edition = "2021"
+authors = ["Nathaniel McCallum <nathaniel.mccallum@amd.com>"]
+description = "UEFI modules that reset the system when loaded"
+license = "MIT"
+repository = "https://github.com/AMDEPYC/uefi-reset"
+homepage = "https://github.com/AMDEPYC/uefi-reset"
+readme = "README.md"
+keywords = ["uefi", "reset", "reboot", "shutdown", "firmware"]
+categories = ["embedded", "no-std", "os"]
+
+[dependencies]
+uefi = { version = "0.35.0", features = ["panic_handler"] }
+
+[profile.release]
+codegen-units = 1
+opt-level = "s"
+panic = "abort"
+strip = true
+lto = true
